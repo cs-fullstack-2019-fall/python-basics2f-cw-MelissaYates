@@ -15,20 +15,20 @@ greeting = "Hello"
 my_name = "Melissa Yates"
 my_age = 33
 
-# print(greeting + ", My name " + " is " + my_name + ". I am " + str(my_age) + " years old.")
-# print(f"{greeting}, My name is {my_name}. I am {str(my_age)} years old.")
+print(greeting + ", My name " + " is " + my_name + ". I am " + str(my_age) + " years old.")
+print(f"{greeting}, My name is {my_name}. I am {str(my_age)} years old.")
 # ### Problem 2:
 # Write some Python code that asks the user for a secret password.
 # Create a loop that quits with the user's quit word. If the user doesn't enter that word, ask them to guess again.
 #
-# secret_password = input("Enter a password ")
-# userInput = " "
-# while userInput != secret_password:
-#     userInput = input("Enter the password confirmation. Enter q to quit ")
-#     if userInput == secret_password:
-#         print("You are correct")
-#     else:
-#         print("Guess again")
+secret_password = input("Enter a password ")
+userInput = " "
+while userInput != secret_password:
+    userInput = input("Enter the password confirmation. Enter q to quit ")
+    if userInput == secret_password:
+        print("You are correct")
+    else:
+        print("Guess again")
 
 
 
@@ -52,15 +52,18 @@ for i in range(1, 50+1):
 # ### Problem 4:
 # Write some Python code that create a random number and stores it in a variable. Ask the user to guess the random number.
 # Keep letting the user guess until they get it right, then quit.
-#
-# random_number = random.randint(1,10)
-# userGuess = " "
-# while userGuess != 'q':
-#     userGuess = int(input("Guess a random number. Enter 'q' to quit "))
-#     if userGuess != random_number:
-#         print("Sorry, Incorrect ")
-#     else:
-#         print("Correct")
+# NOTE : you did not import random
+import random
+random_number = random.randint(1,10)
+userGuess = " "
+while userGuess != 'q':
+    userGuess = int(input("Guess a random number. Enter 'q' to quit "))
+    # userGuess will never equal q bc its a int
+    if userGuess != random_number:
+    	# this is redundant and should be the condition in your while loop
+        print("Sorry, Incorrect ")
+    else:
+        print("Correct")
 # ### Challenge
 # Write some Python code to ask the user to create a number for the computer to guess between 1 - 10000.
 # Write the code so that the computer guesses random numbers between 1 - 10000 and will keep guessing until the computer guesses
